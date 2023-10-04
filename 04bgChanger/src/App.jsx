@@ -19,6 +19,9 @@ const App = () => {
             <Button name="Blue" color="blue" changeColor={changeBgColor} />
             <Button name="Gray" color="gray" changeColor={changeBgColor} />
             <Button name="Black" color="black" changeColor={changeBgColor} />
+            <Button name="Cyan" color="cyan" changeColor={changeBgColor} />
+            <Button name="Orange" color="orange" changeColor={changeBgColor} />
+            <Button name="Pink" color="pink" changeColor={changeBgColor} />
             <Button name="Olive" color="olive" changeColor={changeBgColor} />
           </div>
         </div>
