@@ -33,6 +33,7 @@ Topics that learned in this project
 1. onChange
 2. map
 3. swaping
+4. Object.key()
 
 Tricks:
 Exporting all component from 1 single index.js
