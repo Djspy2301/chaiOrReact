@@ -3,9 +3,14 @@ import UserContext from "../../context/UserContext";
 
 const Profile = () => {
   const { user } = useContext(UserContext);
-
-  if (!user) return <div>Please Login!!!</div>;
-
-  return <div>Welcome {user.username}</div>;
+  let result;
+  if(!user){
+    result='Please Login!!!'
+  }else{
+    result=`Welcome ${user.username}`
+  }
+  return(
+    <div>{result}</div>
+  )
 };
 export default Profile;

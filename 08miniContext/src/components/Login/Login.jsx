@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
+import PassContext from "../../context/Pass/PassContext";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -7,10 +8,17 @@ const Login = () => {
 
   const { setUser } = useContext(UserContext);
 
+  const { pass } = useContext(PassContext);
+  const { setPass } = useContext(PassContext);
+
   const submitHandle = (e) => {
     e.preventDefault();
     if (username && password != "") {
       setUser({ username, password });
+      setPass([]);
+    }else{
+      setPass("Please Enter password")
+      setUser(null)
     }
   };
 
@@ -34,7 +42,7 @@ const Login = () => {
         }}
         placeholder="password"
       />
-      <br />
+      <div >{pass}</div>
       <br />
       <button onClick={submitHandle}>Submit</button>
     </div>
